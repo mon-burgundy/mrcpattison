@@ -9,7 +9,7 @@
 <style>
 html{scroll-behavior:smooth}
 body{margin:0}
-a{color:#2A0A0B}a:hover{color:#2A0A0B;background:#B5FFFA}
+a{color:#2A0A0B}a:hover{color:#2A0A0B;background:#955EFE}
 .page{background:#FAF8F8 url(images/speck.png) 0 0/400px repeat;image-rendering:pixelated}
 .wave{background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated}
 .btn:hover{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important}
@@ -18,7 +18,7 @@ em.s{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;lett
 .ticker{animation:tick 40s linear infinite}
 @media (prefers-reduced-motion:reduce){.ticker{animation:none}}
 .nl{position:relative;isolation:isolate;padding:6px 2px}
-.nl::before{content:"";position:absolute;inset:-14px -22px;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,#B5FFFA 0%,rgba(181,255,250,.9) 50%,rgba(181,255,250,0) 100%);filter:blur(3px);opacity:0;transform:scale(.2);transition:opacity .3s ease,transform .5s cubic-bezier(.2,.9,.3,1.35)}
+.nl::before{content:"";position:absolute;inset:-14px -22px;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,#955EFE 0%,rgba(149,94,254,.9) 50%,rgba(149,94,254,0) 100%);filter:blur(3px);opacity:0;transform:scale(.2);transition:opacity .3s ease,transform .5s cubic-bezier(.2,.9,.3,1.35)}
 .nl:hover,.nl:focus-visible{background:transparent!important;outline:none}
 .nl:hover::before,.nl:focus-visible::before{opacity:1;transform:scale(1)}
 @media (prefers-reduced-motion:reduce){.nl::before{transition:none}}
