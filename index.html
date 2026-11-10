@@ -73,6 +73,8 @@ a.logo{display:inline-block;transition:opacity .25s ease}a.logo::before{display:
 .btn[aria-label="LinkedIn"]::after{inset:-22px -30px}
 .btn{isolation:isolate}
 @media (prefers-reduced-motion:reduce){.btn::after{transition:none}}
+.brand{font-family:'Jacquard 24',serif;font-size:32px;line-height:1;letter-spacing:.01em;color:#2A0A0B;text-decoration:none}.brand-mp{display:none}
+@media (max-width:900px){.brand-full{display:none}.brand-mp{display:inline;font-size:38px}}
 @media (max-width:900px){header .btn{background:#2A0A0B!important;color:#FAF8F8!important;border-color:#2A0A0B!important}}
 @media (max-width:900px){.page{background:url(images/top-fade.png) center top/1200px 520px repeat-x,#FAF8F8 url(images/speck.png) 0 0/400px repeat}}
 @media (max-width:900px){.blk{grid-template-columns:minmax(0,1fr)}.side{border-left:0;border-top:1px solid #2A0A0B;padding:32px 24px 40px}.main{padding:40px 24px}.cols{grid-auto-flow:row}.cols{gap:40px}.hero-copy{padding:48px 24px!important}.navlinks{display:none!important}.side:empty{display:none}}
@@ -122,7 +124,7 @@ body.mopen{overflow:hidden}
 
 <header style="border-bottom: 1px solid #2A0A0B; display: flex; flex-wrap: wrap">
 <div style="flex: 1 1 560px; min-width: 0; padding: 20px 40px 20px max(40px, calc((100vw - 1360px) / 2 + 40px)); display: flex; align-items: center">
-<a href="#top" class="nl" style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 18px; letter-spacing: -0.01em">Monique Pattison</a>
+<a href="#top" class="nl brand" aria-label="Monique Pattison, home"><span class="brand-full">Monique Pattison</span><span class="brand-mp" aria-hidden="true">MP</span></a>
 </div>
 <div class="hr" style="flex: 1 1 480px; min-width: 0; border-left: 1px solid #2A0A0B; box-sizing: border-box">
 <nav style="padding: 20px max(32px, calc((100vw - 1360px) / 2 + 40px)) 20px 32px; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap">
