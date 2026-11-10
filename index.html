@@ -20,8 +20,8 @@ em.s{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;lett
 @media (prefers-reduced-motion:reduce){.ticker{animation:none}}
 a:not(.btn){position:relative;isolation:isolate}
 .nl{padding:6px 2px}
-a:not(.btn)::before{content:"";position:absolute;inset:-14px -22px;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,#955EFE 0%,rgba(149,94,254,.8) 20%,rgba(196,168,255,.75) 50%,rgba(225,210,255,.45) 75%,rgba(225,210,255,0) 100%);filter:blur(3px);opacity:0;transform:scale(.2);transition:opacity .3s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);pointer-events:none}
-a:not(.btn):hover,a:not(.btn):focus-visible{background:transparent!important;outline:none}
+a:not(.btn)::before{content:"";position:absolute;inset:-14px -22px;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,#955EFE 0%,#955EFE 45%,rgba(149,94,254,.85) 65%,rgba(196,168,255,.5) 85%,rgba(225,210,255,0) 100%);filter:blur(3px);opacity:0;transform:scale(.2);transition:opacity .3s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);pointer-events:none}
+a:not(.btn):hover,a:not(.btn):focus-visible{background:transparent!important;outline:none;color:#B5FFFA!important}
 a:not(.btn):hover::before,a:not(.btn):focus-visible::before{opacity:1;transform:scale(1)}
 @media (prefers-reduced-motion:reduce){a:not(.btn)::before{transition:none}}
 @media (max-width:600px){.row{grid-template-columns:minmax(0,1fr)!important;gap:2px!important}}
