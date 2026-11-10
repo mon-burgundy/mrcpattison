@@ -108,6 +108,13 @@ a:not(.btn).tap::before{opacity:1;transform:scale(1)}
 .mmenu.open nav a:nth-child(2){transition-delay:.04s}.mmenu.open nav a:nth-child(3){transition-delay:.08s}.mmenu.open nav a:nth-child(4){transition-delay:.12s}.mmenu.open nav a:nth-child(5){transition-delay:.16s}
 body.mopen{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.mmenu,.mmenu nav a{transition:none}}
+
+/* Touch: burst in, hold, then go back at the same speed */
+@media (hover:none){
+.btn{transition:background-color .5s ease,border-color .5s ease,color .5s ease,transform .5s ease}
+.btn::after{transition:opacity .5s ease,transform .5s ease}
+}
+@media (hover:none) and (prefers-reduced-motion:reduce){.btn,.btn::after{transition:none}}
 </style>
 </head>
 <body>
@@ -330,7 +337,7 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(u
 (function(){if(!('ontouchstart' in window))return;
 document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;
 document.querySelectorAll('a.tap').forEach(function(x){if(x!==a)x.classList.remove('tap')});a.classList.add('tap');
-clearTimeout(a._t);a._t=setTimeout(function(){a.classList.remove('tap')},700);},{passive:true});})();
+clearTimeout(a._t);a._t=setTimeout(function(){a.classList.remove('tap')},a.classList.contains('btn')?1300:700);},{passive:true});})();
 </script>
 <div class="mmenu" id="mmenu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
 <div class="mtop"><span class="mname">Monique Pattison</span><button class="mclose" type="button" aria-label="Close menu"></button></div>
