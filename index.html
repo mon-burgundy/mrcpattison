@@ -397,14 +397,14 @@ var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(all,200)
 </script>
 <script>
 /* Link glow: an irregular, random scatter instead of a symmetrical oval */
-(function(){var cols=['#955EFE','#955EFE','#7B3FF2','#B48CFF','#6A2EE8'];
+(function(){var cols=['#955EFE','#955EFE','#955EFE','#B48CFF','#C9AEFF'];
 function rnd(seed){return function(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}}
 function gauss(r){return (r()+r()+r()-1.5)/1.5}
 function draw(a,i){var w=a.offsetWidth,h=a.offsetHeight;if(!w||!h)return;
 var ex=16+0.08*w,W=Math.round(w+2*ex),H=h+24,r=rnd(7+i*977);
 var n=3+Math.floor(r()*3),bl=[];for(var k=0;k<n;k++)bl.push({x:ex+((k+0.5)/n+(r()-0.5)*0.7/n)*w,y:12+h/2+gauss(r)*h*0.5,sx:(0.18+r()*0.3)*W,sy:(0.25+r()*0.35)*H,s:0.5+r()*0.6});
 bl.push({x:ex+w/2,y:12+h/2,sx:0.5*W,sy:0.42*H,s:0.55});var S=2,soft=document.createElement('canvas');soft.width=W*S;soft.height=H*S;var g=soft.getContext('2d');g.scale(S,S);
-bl.forEach(function(b){var gr=g.createRadialGradient(b.x,b.y,0,b.x,b.y,Math.max(b.sx,b.sy));gr.addColorStop(0,'rgba(149,94,254,'+(0.8*b.s)+')');gr.addColorStop(0.5,'rgba(160,115,255,'+(0.45*b.s)+')');gr.addColorStop(1,'rgba(200,175,255,0)');
+bl.forEach(function(b){var gr=g.createRadialGradient(b.x,b.y,0,b.x,b.y,Math.max(b.sx,b.sy));gr.addColorStop(0,'rgba(149,94,254,'+(0.85*b.s)+')');gr.addColorStop(0.5,'rgba(149,94,254,'+(0.5*b.s)+')');gr.addColorStop(1,'rgba(149,94,254,0)');
 g.save();g.translate(b.x,b.y);g.scale(b.sx/Math.max(b.sx,b.sy),b.sy/Math.max(b.sx,b.sy));g.translate(-b.x,-b.y);g.fillStyle=gr;g.fillRect(0,0,W,H);g.restore();});
 g.setTransform(S,0,0,S,0,0);g.globalCompositeOperation='destination-in';var lg=g.createLinearGradient(0,0,W,0);lg.addColorStop(0,'rgba(0,0,0,0)');lg.addColorStop(0.14,'#000');lg.addColorStop(0.86,'#000');lg.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=lg;g.fillRect(0,0,W,H);
 var vg=g.createLinearGradient(0,0,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(0.2,'#000');vg.addColorStop(0.8,'#000');vg.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=vg;g.fillRect(0,0,W,H);g.globalCompositeOperation='source-over';
