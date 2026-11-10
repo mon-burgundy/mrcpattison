@@ -14,21 +14,21 @@
 <style>
 html{scroll-behavior:smooth}
 body{margin:0}
-a{color:#2A0A0B}a:hover{color:#2A0A0B}
+a{color:#2A0A0B}@media (hover:hover){a:hover{color:#2A0A0B}}
 ::selection{background:#B5FFFA;color:#2A0A0B}
 .page{color:#2A0A0B;font-family:'Space Grotesk','Inter',system-ui,sans-serif;font-size:19px;line-height:1.55;overflow:hidden;background:#FAF8F8 url(images/speck.png) 0 0/400px repeat;image-rendering:pixelated}
 .wave{background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated}
 .btn{text-decoration:none;font-family:'Space Grotesk','Inter',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:0.08em!important;border-radius:999px;display:inline-flex;align-items:center;box-sizing:border-box}
 .btn{border:1px solid transparent}
-.btn:hover{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important}
+@media (hover:hover){.btn:hover{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important}}
 em.s{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.01em}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ticker{animation:tick 40s linear infinite}
 a:not(.btn){position:relative;isolation:isolate}
 .nl{padding:6px 2px;text-decoration:none}
 a:not(.btn)::before{content:"";position:absolute;top:-12px;bottom:-12px;left:calc(-16px - 8%);right:calc(-16px - 8%);z-index:-1;background:url(images/orb.png) center/100% 100% no-repeat,radial-gradient(closest-side,rgba(149,94,254,.95) 0%,rgba(149,94,254,.75) 35%,rgba(185,150,255,.45) 65%,rgba(215,195,255,0) 100%);image-rendering:pixelated;opacity:0;transform:scale(.2);transition:opacity .3s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);pointer-events:none}
-a:not(.btn):hover,a:not(.btn):focus-visible{background:transparent!important;outline:none;color:#FFFFFF!important;-webkit-text-stroke:0.6px #FFFFFF;text-shadow:0 0 .4px #FFFFFF}
-a:not(.btn):hover::before,a:not(.btn):focus-visible::before{opacity:1;transform:scale(1)}
+@media (hover:hover){a:not(.btn):hover,a:not(.btn):focus-visible{background:transparent!important;outline:none;color:#FFFFFF!important;-webkit-text-stroke:0.6px #FFFFFF;text-shadow:0 0 .4px #FFFFFF}}
+@media (hover:hover){a:not(.btn):hover::before,a:not(.btn):focus-visible::before{opacity:1;transform:scale(1)}}
 .line{border-top:1px solid #2A0A0B}
 .blk{display:grid;grid-template-columns:minmax(0,1fr) 340px}
 .main{padding:44px max(40px,calc((100vw - 1360px)/2 + 40px)) 48px;min-width:0}
@@ -45,7 +45,7 @@ a:not(.btn):hover::before,a:not(.btn):focus-visible::before{opacity:1;transform:
 .row{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid rgba(42,10,11,0.3);font-size:17px}
 .num{font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;line-height:1;color:#3F3927}
 .btn{transition:background-color .25s ease,border-color .25s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
-.btn:hover{transform:translateY(-2px)}
+@media (hover:hover){.btn:hover{transform:translateY(-2px)}}
 .js .rv{opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
 .js .conn{transform:scaleX(0);transform-origin:left center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0s) + .35s)}
@@ -65,11 +65,11 @@ a:not(.btn):hover::before,a:not(.btn):focus-visible::before{opacity:1;transform:
 .lit .lw{opacity:.16;transition:opacity .35s ease}
 .lit .lw.on{opacity:1}
 @media (prefers-reduced-motion:reduce){.js .hw>span{transform:none!important;animation:none!important}.lit .lw{opacity:1!important}}
-a.logo{display:inline-block;transition:opacity .25s ease}a.logo::before{display:none!important}a.logo:hover{opacity:.6}
+a.logo{display:inline-block;transition:opacity .25s ease}a.logo::before{display:none!important}@media (hover:hover){a.logo:hover{opacity:.6}}
 .btn{position:relative}
 .btn::after{content:"";position:absolute;inset:-34px -44px;z-index:-2;background:url(images/burst-v2.png) center/100% 100% no-repeat;image-rendering:pixelated;opacity:0;transform:scale(.7);transition:opacity .25s ease,transform .55s cubic-bezier(.2,.9,.3,1.4);pointer-events:none}
 .btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:inherit;pointer-events:none}
-.btn:hover::after,.btn:focus-visible::after{opacity:1;transform:scale(1.08)}
+@media (hover:hover){.btn:hover::after,.btn:focus-visible::after{opacity:1;transform:scale(1.08)}}
 .btn[aria-label="LinkedIn"]::after{inset:-22px -30px}
 .btn{isolation:isolate}
 @media (prefers-reduced-motion:reduce){.btn::after{transition:none}}
