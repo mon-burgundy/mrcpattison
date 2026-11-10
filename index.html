@@ -159,6 +159,12 @@ h1::selection,h1 *::selection,h2::selection,h2 *::selection{background:rgba(181,
 footer.line>div{padding:28px 24px 0!important;text-align:center}
 footer.line>.fr{padding:18px 24px 32px!important;justify-content:space-between!important;gap:0!important}
 }
+
+/* Mobile only: extra green band through "Where I learned to build", fading out both ways across lines */
+@media (max-width:900px){
+#background{position:relative}
+#background::before{content:"";position:absolute;left:0;right:0;top:-92px;height:640px;background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated;z-index:-1;pointer-events:none}
+}
 </style>
 </head>
 <body>
