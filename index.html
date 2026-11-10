@@ -139,7 +139,11 @@ a:not(.btn)::before{background:var(--glow,url(images/orb.png) center/100% 100% n
 /* Big tight headings: see-through highlight so it doesn't cut off the tails of g, j and p */
 h1::selection,h1 *::selection,h2::selection,h2 *::selection{background:rgba(181,255,250,.55)}
 
-.wave-contact{background-position:center -88px}@media (max-width:900px){.wave-contact{background-position:center -112px}}
+/* Contact band: drawn behind everything and allowed to fade across the section line above */
+.page{isolation:isolate}
+.wave-contact{background:none!important;position:relative}
+.wave-contact::before{content:"";position:absolute;left:0;right:0;top:-88px;height:640px;background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated;z-index:-1;pointer-events:none}
+@media (max-width:900px){.wave-contact::before{top:-112px}}
 </style>
 </head>
 <body>
