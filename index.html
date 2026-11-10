@@ -129,7 +129,8 @@ body.mopen{overflow:hidden}
 /* Client and background rows: logo in its own left column */
 @media (min-width:640px){
 .lrow{display:grid!important;grid-template-columns:150px minmax(0,1fr);column-gap:40px;row-gap:14px!important;align-items:start}
-.lrow>h3{grid-column:1;grid-row:1 / span 4;margin:4px 0 0!important}
+.lrow>h3{grid-column:1;grid-row:1;margin:4px 0 0!important}
+.lrow{padding-top:32px!important;padding-bottom:36px!important}.lrow+.side{padding-top:32px!important;padding-bottom:36px!important}.lrow>p{max-width:none!important}
 .lrow>*:not(h3){grid-column:2}
 }
 
