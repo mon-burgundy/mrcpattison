@@ -20,7 +20,7 @@ a{color:#2A0A0B}@media (hover:hover){a:hover{color:#2A0A0B}}
 .wave{background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated}
 .btn{text-decoration:none;font-family:'Space Grotesk','Inter',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:0.08em!important;border-radius:999px;display:inline-flex;align-items:center;box-sizing:border-box}
 .btn{border:1px solid transparent}
-@media (hover:hover){.btn:hover{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important}}
+@media (hover:hover){.btn:hover{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important;-webkit-text-stroke:0.7px #2A0A0B}}
 em.s{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.01em}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ticker{animation:tick 40s linear infinite}
@@ -86,7 +86,7 @@ a.logo{display:inline-block;transition:opacity .25s ease}a.logo::before{display:
 
 /* Tap state on touch screens: mirrors the desktop hover */
 a,.btn{-webkit-tap-highlight-color:transparent}
-.btn.tap{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important;transform:translateY(-2px)}
+.btn.tap{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important;-webkit-text-stroke:0.7px #2A0A0B;transform:translateY(-2px)}
 .btn.tap::after{opacity:1;transform:scale(1.08)}
 a:not(.btn).tap{background:transparent!important;outline:none;color:#FFFFFF!important;-webkit-text-stroke:0.6px #FFFFFF;text-shadow:0 0 .4px #FFFFFF}
 a:not(.btn).tap::before{opacity:1;transform:scale(1)}
@@ -147,7 +147,7 @@ a:not(.btn)::before{background:var(--glow,url(images/orb.png) center/100% 100% n
 <div class="hr" style="flex: 1 1 480px; min-width: 0; border-left: 1px solid #2A0A0B; box-sizing: border-box">
 <nav style="padding: 20px max(32px, calc((100vw - 1360px) / 2 + 40px)) 20px 32px; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap">
 <span class="navlinks" style="display: flex; gap: 24px"><a href="#services" class="nl">Services</a><a href="#work" class="nl">Work</a><a href="#background" class="nl">Background</a></span>
-<a href="#contact" class="btn" style="background: #5DCA9B; color: #2A0A0B; padding: 11px 18px; font-size: 12px; letter-spacing: 0.1em; border: 1px solid #5DCA9B">Let’s chat</a>
+<a href="#contact" class="btn" style="background: #5DCA9B; color: #FFFFFF; padding: 11px 18px; font-size: 12px; letter-spacing: 0.1em; border: 1px solid #5DCA9B">Let’s chat</a>
 <button class="mtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span></button>
 </nav>
 </div>
@@ -160,7 +160,7 @@ a:not(.btn)::before{background:var(--glow,url(images/orb.png) center/100% 100% n
 <h1 style="margin: 0; max-width: 600px; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(36px, 4.6vw, 62px); line-height: 1; letter-spacing: -0.04em; color: #3F3927">Starting out with AI, or have a <span class="s">strategic project</span> that has to land? I come <span style="white-space: nowrap">in and <em class="s">get it done.</em></span></h1>
 <p style="margin: 0; max-width: 660px">I'm an AI and operations consultant working with solopreneurs, startups and small businesses. Clients bring me in for two reasons: to get started with AI and get their team using it, or to deliver a strategic project when they don't have the people to do it. Either way, I build AI into the work and hand it over when it's done.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center">
-<a href="#contact" class="btn" style="background: #5DCA9B; color: #2A0A0B; font-size: 15px; padding: 18px 30px; border: 1px solid #5DCA9B">Get in touch</a>
+<a href="#contact" class="btn" style="background: #5DCA9B; color: #FFFFFF; font-size: 15px; padding: 18px 30px; border: 1px solid #5DCA9B">Get in touch</a>
 <a href="#services" style="font-size: 15px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-underline-offset: 5px">See services</a>
 </div>
 </div>
@@ -310,7 +310,7 @@ a:not(.btn)::before{background:var(--glow,url(images/orb.png) center/100% 100% n
 <span class="sec" style="align-self: center">[05] Contact</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(72px, 11vw, 168px); line-height: 0.9; letter-spacing: -0.05em; color: #3F3927">Let’s <em class="s">talk.</em></h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; align-items: center">
-<a href="mailto:pattison.monique@gmail.com" class="btn" style="background: #5DCA9B; color: #2A0A0B; font-size: 15px; padding: 18px 34px; border: 1px solid #5DCA9B">Email me</a>
+<a href="mailto:pattison.monique@gmail.com" class="btn" style="background: #5DCA9B; color: #FFFFFF; font-size: 15px; padding: 18px 34px; border: 1px solid #5DCA9B">Email me</a>
 <a href="https://www.linkedin.com/in/moniquepattison/" class="btn" target="_blank" rel="noopener" aria-label="LinkedIn" style="width: 56px; height: 56px; border-radius: 50%; border: 1px solid #2A0A0B; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
 </div>
 <a href="mailto:pattison.monique@gmail.com" style="font-size: 17px; text-underline-offset: 4px">pattison.monique@gmail.com</a>
