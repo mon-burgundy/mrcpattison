@@ -142,7 +142,7 @@ h1::selection,h1 *::selection,h2::selection,h2 *::selection{background:rgba(181,
 /* Contact band: drawn behind everything and allowed to fade across the section line above */
 .page{isolation:isolate}
 .wave-contact{background:none!important;position:relative}
-.wave-contact::before{content:"";position:absolute;left:0;right:0;top:-88px;height:640px;background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated;z-index:-1;pointer-events:none}
+.wave-contact::before{content:"";position:absolute;left:0;right:0;top:-88px;bottom:0;background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated;z-index:-1;pointer-events:none}
 @media (max-width:900px){.wave-contact::before{top:-112px}}
 
 /* Mobile tidy-up: fewer lines in clients and background; contact panel evenly spaced */
