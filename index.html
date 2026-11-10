@@ -67,7 +67,7 @@ a:not(.btn)::before{content:"";position:absolute;top:-12px;bottom:-12px;left:cal
 @media (prefers-reduced-motion:reduce){.js .hw>span{transform:none!important;animation:none!important}.lit .lw{opacity:1!important}}
 a.logo{display:inline-block;transition:opacity .25s ease}a.logo::before{display:none!important}@media (hover:hover){a.logo:hover{opacity:.6}}
 .btn{position:relative}
-.btn::after{content:"";position:absolute;inset:-34px -44px;z-index:-2;background:url(images/burst-v2.png) center/100% 100% no-repeat;image-rendering:pixelated;opacity:0;transform:scale(.7);transition:opacity .25s ease,transform .55s cubic-bezier(.2,.9,.3,1.4);pointer-events:none}
+.btn::after{content:"";position:absolute;inset:-34px -44px;z-index:-2;background:var(--burst,url(images/burst-v2.png)) center/100% 100% no-repeat;image-rendering:pixelated;opacity:0;transform:scale(.7);transition:opacity .25s ease,transform .55s cubic-bezier(.2,.9,.3,1.4);pointer-events:none}
 .btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:inherit;pointer-events:none}
 @media (hover:hover){.btn:hover::after,.btn:focus-visible::after{opacity:1;transform:scale(1.08)}}
 .btn[aria-label="LinkedIn"]::after{inset:-22px -30px}
@@ -291,7 +291,7 @@ body.mopen{overflow:hidden}
 <section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 0 40px 72px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
 <span class="sec" style="align-self: center">[05] Contact</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(72px, 11vw, 168px); line-height: 0.9; letter-spacing: -0.05em; color: #3F3927">Let’s <em class="s">talk.</em></h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; align-items: center">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; align-items: center">
 <a href="mailto:pattison.monique@gmail.com" class="btn" style="background: #5DCA9B; color: #2A0A0B; font-size: 15px; padding: 18px 34px; border: 1px solid #5DCA9B">Email me</a>
 <a href="https://www.linkedin.com/in/moniquepattison/" class="btn" target="_blank" rel="noopener" aria-label="LinkedIn" style="width: 56px; height: 56px; border-radius: 50%; border: 1px solid #2A0A0B; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
 </div>
@@ -351,6 +351,20 @@ function set(o){m.classList.toggle('open',o);document.body.classList.toggle('mop
 t.addEventListener('click',function(){set(true)});c.addEventListener('click',function(){set(false)});
 m.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');document.body.classList.remove('mopen');t.setAttribute('aria-expanded',false);m.setAttribute('aria-hidden',true)})});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))set(false)});})();
+</script>
+<script>
+/* Dot burst drawn to each button's size, so the pixels are the same small size on every button */
+(function(){var CELL=2,PX=34,PY=44,cols=['#b5fffa','#b5fffa','#b5fffa','#63eee4','#63eee4','#1bbbb1'];
+function rnd(seed){return function(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}}
+function draw(b,i){var w=b.offsetWidth,h=b.offsetHeight;if(!w||!h)return;
+var W=w+PY*2,H=h+PX*2,cw=Math.ceil(W/CELL),ch=Math.ceil(H/CELL),c=document.createElement('canvas');c.width=cw;c.height=ch;var g=c.getContext('2d'),r=rnd(97+i*131),
+rad=Math.min(h,w)/2,x0=PY+rad,x1=PY+w-rad,yc=PX+h/2;
+for(var y=0;y<ch;y++)for(var x=0;x<cw;x++){var px=x*CELL+CELL/2,py=y*CELL+CELL/2,cx=Math.max(x0,Math.min(x1,px)),d=Math.hypot(px-cx,py-yc)-rad;
+var p=d<0?0.9:0.88*Math.exp(-d/13);if(r()<p){g.fillStyle=cols[Math.floor(r()*cols.length)];g.fillRect(x,y,1,1);}}
+b.style.setProperty('--burst','url('+c.toDataURL()+')');}
+function all(){[].forEach.call(document.querySelectorAll('.btn'),draw)}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(all);all();
+var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(all,200)});})();
 </script>
 </body>
 </html>
