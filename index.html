@@ -7,187 +7,192 @@
 <meta name="description" content="AI and operations consultant in Berlin. Starting out with AI, or have a strategic project that has to land? I come in and get it done.">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
-body{margin:0;background:#FAF8F8}
-a{color:#2A0A0B;text-underline-offset:3px}a:not(.pill):not(.pill-outline){border-radius:4px;transition:background .2s ease,box-shadow .2s ease}a:not(.pill):not(.pill-outline):hover{color:#2A0A0B;background:#B7F796;box-shadow:0 0 0 4px #B7F796}
-</style>
-<style>
 html{scroll-behavior:smooth}
-.pill{background:#84FC99;color:#2A0A0B!important;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;border-radius:999px;display:inline-flex;align-items:center;box-sizing:border-box;transition:background .2s ease}
-.pill:hover{background:#B5FFFA!important;color:#2A0A0B!important}
-.card{background:radial-gradient(ellipse 75% 45% at 0% 52%,rgba(248,255,251,.75) 0%,rgba(248,255,251,.45) 55%,rgba(248,255,251,0) 100%),linear-gradient(180deg,#D2FFD6 0%,rgba(210,255,214,0) 30%),#C7FFEB;border-radius:24px;padding:40px}
-@media (max-width:600px){.card{padding:28px}.navlinks{display:none!important}}
-.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
-.js .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-.card div:first-child{color:#2A0A0B!important;font-weight:700}
-.pill-outline{background:transparent;border:2px solid #84FC99;color:#2A0A0B;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;border-radius:999px;display:inline-flex;align-items:center;box-sizing:border-box;transition:background .2s ease}.pill-outline:hover{background:#B5FFFA;border-color:#B5FFFA;color:#2A0A0B}
-.dot{color:inherit}
-h1,h2,h3{color:#4F4730!important}
+body{margin:0}
+a{color:#2A0A0B}a:hover{color:#2A0A0B;background:#B5FFFA}
+.page{background:#FAF8F8 url(images/speck.png) 0 0/400px repeat;image-rendering:pixelated}
+.wave{background:url(images/wave.png) center top/1440px 640px repeat-x;image-rendering:pixelated}
+.btn:hover{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important}
+em.s{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.01em}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker{animation:tick 40s linear infinite}
+@media (prefers-reduced-motion:reduce){.ticker{animation:none}}
+@media (max-width:600px){.row{grid-template-columns:minmax(0,1fr)!important;gap:2px!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<div style="background: #FAF8F8; color: #2A0A0B; font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.65">
+<div class="page" style="color: #2A0A0B; font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.6; overflow: hidden">
 
-<div style="position: sticky; top: 0; z-index: 10; background: rgba(250,248,248,0.9); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(42,10,11,0.15)">
-<header style="max-width: 1120px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 16px; justify-content: space-between; align-items: center">
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em">Monique Pattison</div>
-<nav style="display: flex; align-items: center; gap: 28px; font-size: 15px">
-<span class="navlinks" style="display: flex; gap: 28px">
+<header style="max-width: 1280px; margin: 0 auto; padding: 22px 40px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<a href="#top" style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 17px; letter-spacing: -0.01em; text-decoration: none">Monique Pattison</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase">
 <a href="#services" style="text-decoration: none">Services</a>
 <a href="#work" style="text-decoration: none">Work</a>
 <a href="#background" style="text-decoration: none">Background</a>
-<a href="#contact" style="text-decoration: none">Contact</a>
-</span>
-<a href="#contact" class="pill" style="font-size: 14px; padding: 8px 18px; min-height: 36px">Get in touch</a>
+<a href="#contact" class="btn" style="text-decoration: none; background: #84FC99; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.1em">Get in touch</a>
 </nav>
 </header>
-</div>
 
-<section style="max-width: 1120px; margin: 0 auto; padding: 64px 24px 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 36px">
-<div style="font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: #2A0A0B">AI &amp; Operations Consultant · Berlin</div>
-<h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(34px, 4.2vw, 54px); line-height: 1.05; letter-spacing: -0.03em; max-width: 960px">Starting out with AI, or have a strategic project that has to land? I come in and get it done.</h1>
-<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: #2A0A0B">I'm an independent AI and operations consultant working with solopreneurs, startups and small businesses in Germany and the UK. Clients bring me in for two reasons: to get started with AI and get their team using it, or to deliver a strategic project when they don't have the people to do it. Either way, I build AI into the work and hand it over when it's done.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center">
-<a href="#contact" class="pill" style=" text-decoration: none; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 16px; padding: 16px 28px; border-radius: 999px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Get in touch</a>
-<a href="#services" style="font-size: 16px">See services</a>
+<section id="top" style="display: flex; flex-wrap: wrap; min-height: 760px">
+<div style="flex: 1 1 560px; min-width: 0; display: flex; align-items: center; padding: 56px 40px 72px max(40px, calc((100vw - 1280px) / 2 + 40px))">
+<div style="max-width: 600px; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">
+<span style="width: 28px; height: 1px; background: #3F3927"></span>
+<span>AI and operations consultant · Berlin</span>
+</div>
+<h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(44px, 5vw, 76px); line-height: 0.98; letter-spacing: -0.04em; color: #3F3927">Starting out with AI, or have a <span class="s">strategic project</span> that has to land? I come in and <em class="s">get it done.</em></h1>
+<p style="margin: 0; max-width: 500px; font-size: 18px; line-height: 1.6">I'm an AI and operations consultant working with solopreneurs, startups and small businesses. Clients bring me in for two reasons: to get started with AI and get their team using it, or to deliver a strategic project when they don't have the people to do it. Either way, I build AI into the work and hand it over when it's done.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center">
+<a href="#contact" class="btn" style="text-decoration: none; background: #84FC99; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 16px; padding: 18px 30px; border-radius: 999px; border: 1px solid transparent">Get in touch</a>
+<a href="#services" style="font-size: 16px; text-underline-offset: 4px">See services</a>
 </div>
 </div>
-<img class="reveal" src="images/monique.jpg" width="960" height="1200" alt="Monique Pattison speaking on stage" style="width: 100%; max-width: 460px; height: auto; justify-self: end; border-radius: 24px; display: block">
-</section>
-
-<section id="services" style="max-width: 1120px; margin: 0 auto; padding: 0 24px 40px">
-<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: baseline; padding-top: 32px; margin-bottom: 48px">
-<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.02em">What I do</h2>
-<div style="font-size: 15px; color: #2A0A0B">Two ways to work with me</div>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
-<article class="card reveal" style="display: flex; flex-direction: column; gap: 12px">
-<div style="font-family: 'Inter Tight', sans-serif; font-size: 15px; color: #2A0A0B">01</div>
-<h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 24px; letter-spacing: -0.015em">AI from zero to one</h3>
-<p style="margin: 0; color: #2A0A0B">For solopreneurs, startups and small businesses starting out with AI. Pick what you need:</p>
-<ul style="margin: 0; padding-left: 20px; color: #2A0A0B">
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Diagnosis:</strong> where AI fits and where to start</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Setup:</strong> picking the tools and how they fit together</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Build:</strong> a company second brain your AI can read, plus agents and automations</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Training and rollout:</strong> one to one or in groups, until it sticks</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">1:1 AI support:</strong> answers while you find your feet</li>
-</ul>
-<div style="margin-top: auto; padding-top: 8px; font-size: 15px; color: #2A0A0B; font-style: italic">By project</div>
-</article>
-<article class="card reveal" style="display: flex; flex-direction: column; gap: 12px">
-<div style="font-family: 'Inter Tight', sans-serif; font-size: 15px; color: #2A0A0B">02</div>
-<h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 24px; letter-spacing: -0.015em">Short-term firepower</h3>
-<p style="margin: 0; color: #2A0A0B">For a strategic project that has to land, without a new hire. How it runs:</p>
-<ul style="margin: 0; padding-left: 20px; color: #2A0A0B">
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Get up to speed:</strong> I learn your business fast</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Plan:</strong> scope, timeline and who does what</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Execute:</strong> I do the work, with AI built in as I go</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Hand over:</strong> documented, so your team can run it without me</li>
-<li style="margin: 0 0 8px"><strong style="font-weight: 600">Typical work:</strong> process design, internal systems, customer journeys, hiring support</li>
-</ul>
-<div style="margin-top: auto; padding-top: 8px; font-size: 15px; color: #2A0A0B; font-style: italic">One to six months, on a monthly retainer</div>
-</article>
+<div style="flex: 1 1 480px; min-width: 0; position: relative; min-height: 640px">
+<img src="images/monique.jpg" alt="Monique Pattison speaking on stage" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); mask-image: linear-gradient(to bottom, #000 72%, transparent 100%)">
 </div>
 </section>
 
-<section style="background: #FAF8F8; color: #2A0A0B">
-<div style="max-width: 1120px; margin: 0 auto; padding: 0 24px 40px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 32px">
-<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.02em">How I work</h2>
+<div class="wave" style="margin-top: -260px; padding-top: 300px">
+<div style="border-top: 1px solid rgba(63,57,39,0.35); border-bottom: 1px solid rgba(63,57,39,0.35); padding: 16px 0; overflow: hidden; white-space: nowrap">
+<div class="ticker" style="display: inline-flex; gap: 48px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; padding-left: 48px">
+<span>Diagnosis</span><span>✳</span><span>Setup</span><span>✳</span><span>Build</span><span>✳</span><span>Training and rollout</span><span>✳</span><span>1:1 AI support</span><span>✳</span><span>Process design</span><span>✳</span><span>Internal systems</span><span>✳</span><span>Customer journeys</span><span>✳</span>
+<span aria-hidden="true" style="display: contents"><span>Diagnosis</span><span>✳</span><span>Setup</span><span>✳</span><span>Build</span><span>✳</span><span>Training and rollout</span><span>✳</span><span>1:1 AI support</span><span>✳</span><span>Process design</span><span>✳</span><span>Internal systems</span><span>✳</span><span>Customer journeys</span><span>✳</span></span>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 32px 40px">
-<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 10px">
-<div style="font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 500; color: #2A0A0B">01</div>
-<div style="height: 3px; background: #2A0A0B; margin-bottom: 10px"></div>
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 22px">Intro call</div>
-<p style="margin: 0; font-size: 17px; color: #2A0A0B">A free 30-minute call about what you need done, or where to start with AI.</p>
-</div>
-<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 10px">
-<div style="font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 500; color: #2A0A0B">02</div>
-<div style="height: 3px; background: #2A0A0B; margin-bottom: 10px"></div>
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 22px">Scope</div>
-<p style="margin: 0; font-size: 17px; color: #2A0A0B">You get a short plan: what I'll do, how long it takes and what it costs. No surprises.</p>
-</div>
-<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 10px">
-<div style="font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 500; color: #2A0A0B">03</div>
-<div style="height: 3px; background: #2A0A0B; margin-bottom: 10px"></div>
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 22px">Deliver</div>
-<p style="margin: 0; font-size: 17px; color: #2A0A0B">I do the work, build AI in as I go, and hand it over so your team can run it. A fixed price per project, or a monthly retainer for bigger work.</p>
-</div>
-</div>
-<p style="margin: -20px 0 0; font-size: 16px; font-style: italic; color: #2A0A0B">Based in Berlin. Working remotely, with on-site days possible.</p>
-</div>
-</section>
-
-<section id="work" style="max-width: 1120px; margin: 0 auto; padding: 0 24px 40px">
-<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: baseline; padding-top: 32px; margin-bottom: 24px">
-<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.02em">Recent clients</h2>
 </div>
 
+<section id="services" style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end; margin-bottom: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">(01) Services</div>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(44px, 5vw, 80px); line-height: 1; letter-spacing: -0.04em; color: #3F3927">What I <em class="s">do</em></h2>
+</div>
+<div style="font-size: 16px">Two ways to work with me</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 64px">
+<article style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid #3F3927; padding-bottom: 20px">
+<span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 64px; line-height: 1; color: #3F3927">01</span>
+<h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 30px; letter-spacing: -0.02em; color: #3F3927">AI from zero to one</h3>
+</div>
+<p style="margin: 0">For solopreneurs, startups and small businesses starting out with AI. Pick what you need:</p>
 <div style="display: flex; flex-direction: column">
-<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 16px 48px; padding: 24px 0">
-<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px">
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 21px">Agent Accelerator</div>
-<div style="font-size: 15px; color: #2A0A0B">Remote from Berlin · 2026</div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Diagnosis</strong><span>where AI fits and where to start</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Setup</strong><span>picking the tools and how they fit together</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Build</strong><span>a company second brain your AI can read, plus agents and automations</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Training and rollout</strong><span>one to one or in groups, until it sticks</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">1:1 AI support</strong><span>answers while you find your feet</span></div>
 </div>
-<p style="flex: 2 1 460px; margin: 0; color: #2A0A0B">Running operations for a cohort-based AI training course: onboarding, participant support, technical troubleshooting and completion analysis. Also built the second brain and the agents and automations behind the back office, cutting operations work per cohort from about 20 to 12–15 hours a week.</p>
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; padding-top: 8px">By project</div>
+</article>
+<article style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid #3F3927; padding-bottom: 20px">
+<span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 64px; line-height: 1; color: #3F3927">02</span>
+<h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 30px; letter-spacing: -0.02em; color: #3F3927">Short-term firepower</h3>
+</div>
+<p style="margin: 0">For a strategic project that has to land, without a new hire. How it runs:</p>
+<div style="display: flex; flex-direction: column">
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Get up to speed</strong><span>I learn your business fast</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Plan</strong><span>scope, timeline and who does what</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Execute</strong><span>I do the work, with AI built in as I go</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Hand over</strong><span>documented, so your team can run it without me</span></div>
+<div class="row" style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(63,57,39,0.25)"><strong style="font-weight: 500">Typical work</strong><span>process design, internal systems, customer journeys, hiring support</span></div>
+</div>
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; padding-top: 8px">One to six months, on a monthly retainer</div>
+</article>
+</div>
+</section>
 </div>
 
-<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 16px 48px; padding: 24px 0">
-<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px">
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 21px">Loka</div>
-<div style="font-size: 15px; color: #2A0A0B">Remote from Berlin · 2026</div>
+<div class="wave" style="margin-top: -40px; padding-top: 140px">
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 40px 56px">
+<div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px">
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">(02) Process</div>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(44px, 5vw, 80px); line-height: 1; letter-spacing: -0.04em; color: #3F3927">How I <em class="s">work</em></h2>
 </div>
-<p style="flex: 2 1 460px; margin: 0; color: #2A0A0B">Strategic and operational support to the two founders. Built their AI setup and internal knowledge system, and ran hiring, customer experience and process projects.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #3F3927; display: inline-flex; align-items: center; justify-content: center; font-size: 14px">01</span><span style="flex: 1; height: 1px; background: #3F3927"></span></div>
+<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 26px; letter-spacing: -0.02em; color: #3F3927">Intro call</div>
+<p style="margin: 0">A free 30-minute call about what you need done, or where to start with AI.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #3F3927; display: inline-flex; align-items: center; justify-content: center; font-size: 14px">02</span><span style="flex: 1; height: 1px; background: #3F3927"></span></div>
+<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 26px; letter-spacing: -0.02em; color: #3F3927">Scope</div>
+<p style="margin: 0">You get a short plan: what I'll do, how long it takes and what it costs. No surprises.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #3F3927; color: #FAF8F8; display: inline-flex; align-items: center; justify-content: center; font-size: 14px">03</span><span style="flex: 1; height: 1px; background: transparent"></span></div>
+<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 26px; letter-spacing: -0.02em; color: #3F3927">Deliver</div>
+<p style="margin: 0">I do the work, build AI in as I go, and hand it over so your team can run it. A fixed price per project, or a monthly retainer for bigger work.</p>
+</div>
+</div>
+<p style="margin: 40px 0 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 24px; color: #3F3927">Based in Berlin. Working remotely, with on-site days possible.</p>
+</section>
+</div>
+
+<section id="work" style="max-width: 1280px; margin: 0 auto; padding: 24px 40px 72px">
+<div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px">
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">(03) Work</div>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(44px, 5vw, 80px); line-height: 1; letter-spacing: -0.04em; color: #3F3927">Recent <em class="s">clients</em></h2>
+</div>
+<div style="border-top: 1px solid #3F3927">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px 48px; padding: 32px 0; border-bottom: 1px solid rgba(63,57,39,0.35)">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.02em; color: #3F3927">Agent Accelerator</div>
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">Remote from Berlin · 2026</div>
+</div>
+<p style="margin: 0; grid-column: span 2">Running operations for a cohort-based AI training course: onboarding, participant support, technical troubleshooting and completion analysis. Also built the second brain and the agents and automations behind the back office, cutting operations work per cohort from about 20 to 12–15 hours a week.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px 48px; padding: 32px 0; border-bottom: 1px solid rgba(63,57,39,0.35)">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.02em; color: #3F3927">Loka</div>
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">Remote from Berlin · 2026</div>
+</div>
+<p style="margin: 0; grid-column: span 2">Strategic and operational support to the two founders. Built their AI setup and internal knowledge system, and ran hiring, customer experience and process projects.</p>
 </div>
 </div>
 </section>
 
-<section id="background" style="max-width: 1120px; margin: 0 auto; padding: 0 24px 40px">
-<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: baseline; padding-top: 32px; margin-bottom: 24px">
-<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.02em">Where I learned to build</h2>
-<div style="font-size: 15px; color: #2A0A0B">I learned how great startups build from the inside, at two of Europe’s most admired. Now I bring that playbook to yours.</div>
+<section id="background" style="max-width: 1280px; margin: 0 auto; padding: 0 40px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; justify-content: space-between; align-items: flex-end; margin-bottom: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">(04) Background</div>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(44px, 5vw, 80px); line-height: 1; letter-spacing: -0.04em; color: #3F3927">Where I learned to <em class="s">build</em></h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px">
-<div class="reveal" style="display: flex; flex-direction: column; gap: 10px">
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 24px">Blinkist</div>
-<div style="font-size: 15px; color: #2A0A0B">Berlin · 2020 to 2024</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 13px; padding: 4px 12px; border-radius: 999px; background: #2A0A0B; color: #FAF8F8">Go-to-market</span><span style="font-size: 13px; padding: 4px 12px; border-radius: 999px; background: #2A0A0B; color: #FAF8F8">Product</span></div>
-<p style="margin: 0; color: #2A0A0B">Third hire in a brand-new B2B team. Grew it from 3 to 20 people and €1M to €3M, and saw the company through to its acquisition by Go1 in 2023.</p>
+<p style="margin: 0; max-width: 380px; font-size: 16px">I learned how great startups build from the inside, at two of Europe’s most admired. Now I bring that playbook to yours.</p>
 </div>
-<div class="reveal" style="display: flex; flex-direction: column; gap: 10px">
-<div style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 24px">Monzo</div>
-<div style="font-size: 15px; color: #2A0A0B">London · 2017 to 2020</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 13px; padding: 4px 12px; border-radius: 999px; background: #2A0A0B; color: #FAF8F8">Operations</span><span style="font-size: 13px; padding: 4px 12px; border-radius: 999px; background: #2A0A0B; color: #FAF8F8">Product</span></div>
-<p style="margin: 0; color: #2A0A0B">Joined before the hypergrowth, and helped scale customer operations from 30 to 300 people as Monzo grew into a bank with 16 million customers and over 5,000 staff.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #3F3927; padding-top: 24px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px"><span style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.02em; color: #3F3927">Blinkist</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">Berlin · 2020 to 2024</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid #3F3927">Go-to-market</span><span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid #3F3927">Product</span></div>
+<p style="margin: 0">Third hire in a brand-new B2B team. Grew it from 3 to 20 people and €1M to €3M, and saw the company through to its acquisition by Go1 in 2023.</p>
 </div>
-</div>
-</section>
-
-<section id="contact">
-<div style="max-width: 1120px; margin: 0 auto; padding: 48px 24px 56px; display: flex; flex-direction: column; gap: 28px">
-<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.03em; line-height: 1.05">Let’s talk.</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center">
-<a href="mailto:pattison.monique@gmail.com" class="pill" style="font-size: 17px; padding: 16px 32px; min-height: 52px">Email me</a>
-<a href="https://www.linkedin.com/in/moniquepattison/" class="pill-outline" target="_blank" rel="noopener" aria-label="LinkedIn" style="width: 52px; height: 52px; justify-content: center; padding: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-<a href="mailto:pattison.monique@gmail.com" style="font-size: 16px; color: #2A0A0B">pattison.monique@gmail.com</a>
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #3F3927; padding-top: 24px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px"><span style="font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.02em; color: #3F3927">Monzo</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">London · 2017 to 2020</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid #3F3927">Operations</span><span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid #3F3927">Product</span></div>
+<p style="margin: 0">Joined before the hypergrowth, and helped scale customer operations from 30 to 300 people as Monzo grew into a bank with 16 million customers and over 5,000 staff.</p>
 </div>
 </div>
 </section>
 
-<footer style="max-width: 1120px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; font-size: 13px; color: #2A0A0B">
+<div class="wave" style="padding-top: 200px; margin-top: -40px">
+<section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 0 40px 80px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px">
+<div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase">(05) Contact</div>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(72px, 11vw, 168px); line-height: 0.9; letter-spacing: -0.05em; color: #3F3927">Let’s <em class="s">talk.</em></h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; align-items: center">
+<a href="mailto:pattison.monique@gmail.com" class="btn" style="text-decoration: none; background: #2A0A0B; color: #FAF8F8; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 17px; padding: 18px 34px; border-radius: 999px; border: 1px solid #2A0A0B">Email me</a>
+<a href="https://www.linkedin.com/in/moniquepattison/" class="btn" aria-label="LinkedIn" style="width: 56px; height: 56px; box-sizing: border-box; border-radius: 50%; border: 1px solid #2A0A0B; display: inline-flex; align-items: center; justify-content: center; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
+</div>
+<a href="mailto:pattison.monique@gmail.com" style="font-size: 16px; text-underline-offset: 4px">pattison.monique@gmail.com</a>
+</section>
+<footer style="max-width: 1280px; margin: 0 auto; padding: 24px 40px 40px; display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; border-top: 1px solid rgba(63,57,39,0.35)">
 <span>© 2026 Monique Pattison · Berlin</span>
-<span style="display: flex; gap: 24px"><a href="https://www.linkedin.com/in/moniquepattison/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
+<span style="display: flex; gap: 24px"><a href="https://www.linkedin.com/in/moniquepattison/" style="text-decoration: none">LinkedIn</a><a href="impressum.html" style="text-decoration: none">Impressum</a><a href="datenschutz.html" style="text-decoration: none">Datenschutz</a></span>
 </footer>
+</div>
 
 </div>
-<script>
-(function(){var els=document.querySelectorAll('.reveal');
-if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
-els.forEach(function(e){io.observe(e)});})();
-</script>
 </body>
 </html>
