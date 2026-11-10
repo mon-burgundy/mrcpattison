@@ -87,6 +87,8 @@ a,.btn{-webkit-tap-highlight-color:transparent}
 .btn.tap::after{opacity:1;transform:scale(1.08)}
 a:not(.btn).tap{background:transparent!important;outline:none;color:#FFFFFF!important;-webkit-text-stroke:0.6px #FFFFFF;text-shadow:0 0 .4px #FFFFFF}
 a:not(.btn).tap::before{opacity:1;transform:scale(1)}
+
+.conn-end{display:none}@media (max-width:900px){.conn-end{display:block}}
 </style>
 </head>
 <body>
@@ -184,7 +186,7 @@ a:not(.btn).tap::before{opacity:1;transform:scale(1)}
 <p style="margin: 0; font-size: 17px">You get a short plan: what I'll do, how long it takes and what it costs. No surprises.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #2A0A0B; color: #FAF8F8; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; flex: none">03</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #2A0A0B; color: #FAF8F8; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; flex: none">03</span><span class="conn conn-end" style="flex: 1; height: 1px; background: #2A0A0B"></span></div>
 <div class="h3" style="font-size: 26px">Deliver</div>
 <p style="margin: 0; font-size: 17px">I do the work, build AI in as I go, and hand it over so your team can run it. A fixed price per project, or a monthly retainer for bigger work.</p>
 </div>
