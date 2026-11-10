@@ -123,6 +123,8 @@ body.mopen{overflow:hidden}
 .btn:not([aria-label="LinkedIn"])::after{background:var(--burst,url(images/burst-v2.png)) center/100% 100% no-repeat}
 
 .mmenu .mname{font-family:'Jacquard 24',serif!important;font-weight:400!important;font-size:38px!important;line-height:1;letter-spacing:.01em!important;color:#955EFE}
+
+.mmenu .mtop{position:relative;height:88px;padding:0}.mmenu .mtop .mname,.mmenu .mtop .mclose{position:absolute}
 </style>
 </head>
 <body>
@@ -353,7 +355,9 @@ clearTimeout(a._t);a._t=setTimeout(function(){a.classList.remove('tap')},a.class
 </div>
 <script>
 (function(){var m=document.getElementById('mmenu'),t=document.querySelector('.mtoggle'),c=m.querySelector('.mclose');
-function set(o){m.classList.toggle('open',o);document.body.classList.toggle('mopen',o);t.setAttribute('aria-expanded',o);m.setAttribute('aria-hidden',!o);if(o)c.focus();else t.focus();}
+function place(){var bm=document.querySelector('.brand-mp'),n=m.querySelector('.mname'),r=bm.getBoundingClientRect(),tr=t.getBoundingClientRect();
+var y=scrollY;n.style.left=r.left+'px';n.style.top=(r.top+y)+'px';c.style.left=(tr.left+tr.width/2-16)+'px';c.style.top=(tr.top+y+tr.height/2-16)+'px';}
+function set(o){if(o)place();m.classList.toggle('open',o);document.body.classList.toggle('mopen',o);t.setAttribute('aria-expanded',o);m.setAttribute('aria-hidden',!o);if(o)c.focus();else t.focus();}
 t.addEventListener('click',function(){set(true)});c.addEventListener('click',function(){set(false)});
 m.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');document.body.classList.remove('mopen');t.setAttribute('aria-expanded',false);m.setAttribute('aria-hidden',true)})});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))set(false)});})();
