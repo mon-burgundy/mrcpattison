@@ -80,6 +80,13 @@ a.logo{display:inline-block;transition:opacity .25s ease}a.logo::before{display:
 @media (max-width:600px){footer.line{grid-template-columns:minmax(0,1fr)!important}.fr{border-left:0!important;justify-content:flex-start!important;padding-top:0!important}}
 @media (max-width:600px){.row{grid-template-columns:minmax(0,1fr);gap:2px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker{animation:none}a:not(.btn)::before{transition:none}}
+
+/* Tap state on touch screens: mirrors the desktop hover */
+a,.btn{-webkit-tap-highlight-color:transparent}
+.btn.tap{background:#B5FFFA!important;color:#2A0A0B!important;border-color:#B5FFFA!important;transform:translateY(-2px)}
+.btn.tap::after{opacity:1;transform:scale(1.08)}
+a:not(.btn).tap{background:transparent!important;outline:none;color:#FFFFFF!important;-webkit-text-stroke:0.6px #FFFFFF;text-shadow:0 0 .4px #FFFFFF}
+a:not(.btn).tap::before{opacity:1;transform:scale(1)}
 </style>
 </head>
 <body>
@@ -296,6 +303,12 @@ var tick=false;
 function update(){tick=false;var r=p.getBoundingClientRect(),vh=innerHeight;var start=vh*0.92,end=vh*0.62;var prog=(start-r.top)/(start-end);prog=Math.max(0,Math.min(1,prog));var n=Math.round(prog*words.length);words.forEach(function(w,i){w.classList.toggle('on',i<n)});}
 addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(update);}},{passive:true});addEventListener('resize',update);update();
 })();
+</script>
+<script>
+(function(){if(!('ontouchstart' in window))return;
+document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;
+document.querySelectorAll('a.tap').forEach(function(x){if(x!==a)x.classList.remove('tap')});a.classList.add('tap');
+clearTimeout(a._t);a._t=setTimeout(function(){a.classList.remove('tap')},700);},{passive:true});})();
 </script>
 </body>
 </html>
