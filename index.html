@@ -175,6 +175,51 @@ footer.line>.fr{padding:18px 24px 32px!important;justify-content:space-between!i
 /* Mobile header: everything on one centre line */
 header>.hr{display:flex!important;align-items:center}header>.hr>nav{width:100%}
 .mmenu .mname{display:inline-flex!important;align-items:center;justify-content:center;width:44px;height:44px;border-radius:11px;background:#955EFE;color:#84FC99!important;font-size:36px!important;letter-spacing:0!important;padding-bottom:2px;box-sizing:border-box}.mmenu .mclose{color:#955EFE}.mmenu .mclose::before,.mmenu .mclose::after{height:2px}
+
+/* Recent clients (#work): client, what I did, results; quote on the left under the results; engagement details on the right, starting on the results line */
+.rc-intro{margin:0;max-width:600px;font-size:17px}
+.rc-in{display:grid;grid-template-columns:minmax(0,1fr) 200px;column-gap:48px;row-gap:16px;align-items:start;padding:28px max(40px,calc((100vw - 1360px)/2 + 40px)) 32px}
+.rc-ident{grid-column:1/-1;display:grid;gap:16px;justify-items:start}
+.rc-story{grid-column:1/-1;margin:0;font-size:16px;line-height:1.5}
+.rc-stats,.rc-quote{grid-column:1;min-width:0}
+.rc-logo-aa{width:48px;height:48px;border-radius:6px;display:block;image-rendering:auto}
+.rc-logo-loka{height:20px;width:auto;display:block;image-rendering:auto}
+.rc-desc{margin:0;font-family:'Space Grotesk','Inter',system-ui,sans-serif;font-weight:400;font-size:13px;line-height:1.3;letter-spacing:.06em;text-transform:uppercase;color:#2A0A0B}
+.rc-desc .rc-co{font-weight:500;text-decoration:none}
+.rc-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(42,10,11,.3)}
+.rc-stat{padding:14px 16px 0 0;display:grid;gap:4px;align-content:start;min-width:0}
+.rc-stat+.rc-stat{padding-left:16px;border-left:1px solid rgba(42,10,11,.3)}
+.rc-num{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:40px;line-height:1;color:#3F3927}
+.rc-what{font-size:14px;line-height:1.35}
+.rc-from{font-size:13px;line-height:1.3;opacity:.75}
+.rc-quote{margin:6px 0 0;padding:18px 20px;border:1px solid rgba(42,10,11,.3);display:grid;gap:8px;background:linear-gradient(rgba(250,248,248,.35),rgba(250,248,248,.35)),url(images/scatter.png) 0 0/240px 240px repeat;image-rendering:pixelated}
+.rc-quote p{margin:0;font-size:15px;line-height:1.55}
+.rc-quote p::before{content:"\201C";font-family:'Instrument Serif',serif;font-style:italic;font-size:1.5em;line-height:0;margin-right:2px;color:#3F3927}
+.rc-quote p::after{content:"\201D";font-family:'Instrument Serif',serif;font-style:italic;font-size:1.5em;line-height:0;margin-left:2px;color:#3F3927}
+.rc-by{display:flex;align-items:center;gap:12px;margin-top:6px}
+.rc-face{width:44px;height:44px;border-radius:50%;object-fit:cover;display:block;flex:none;border:1px solid rgba(42,10,11,.3);image-rendering:auto}
+.rc-quote cite{font-style:normal;display:grid;gap:1px;min-width:0;justify-items:start}
+.rc-quote cite a{font-size:15px;font-weight:500;text-decoration:none}
+.rc-li{font-size:13px;font-weight:400;margin-left:6px;opacity:.75}
+.rc-role{font-size:13px;opacity:.75}
+.rc-side{grid-column:2;grid-row:3/span 2;display:grid;gap:20px;align-content:start;border-top:1px solid rgba(42,10,11,.3);padding-top:14px}
+.rc-side p{margin:0}
+.rc-ml{font-size:13px;line-height:1.3;opacity:.75;margin-bottom:4px!important}
+.rc-mv{font-size:16px;line-height:1.35}
+.rc-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.rc-tags li{border:1px solid #2A0A0B;font-size:11px;line-height:1;letter-spacing:.06em;text-transform:uppercase;padding:5px 7px 4px;white-space:nowrap}
+@media (max-width:900px){
+.rc-in{grid-template-columns:minmax(0,1fr);padding:28px 24px 32px}
+.rc-ident,.rc-story,.rc-stats,.rc-quote,.rc-side{grid-column:1;grid-row:auto}
+.rc-side{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+}
+@media (max-width:600px){
+.rc-stats{grid-template-columns:minmax(0,1fr)}
+.rc-stat,.rc-stat+.rc-stat{padding:14px 0;border-left:0}
+.rc-stat+.rc-stat{border-top:1px solid rgba(42,10,11,.3)}
+.rc-num{font-size:36px}
+.rc-side{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
@@ -231,7 +276,7 @@ header>.hr{display:flex!important;align-items:center}header>.hr>nav{width:100%}
 <div style="border-top: 1px solid #2A0A0B">
 <div class="row"><strong style="font-weight: 500">Diagnosis</strong><span>where AI fits and where to start</span></div>
 <div class="row"><strong style="font-weight: 500">Setup</strong><span>picking the tools and how they fit together</span></div>
-<div class="row"><strong style="font-weight: 500">Build</strong><span>a company second brain your AI can read, plus agents and automations</span></div>
+<div class="row"><strong style="font-weight: 500">Build</strong><span>a company brain your AI can read, plus agents and automations</span></div>
 <div class="row"><strong style="font-weight: 500">Rollout</strong><span>one to one or in groups, until it sticks</span></div>
 <div class="row"><strong style="font-weight: 500">1:1 AI support</strong><span>answers while you find your feet</span></div>
 </div>
@@ -288,28 +333,55 @@ header>.hr{display:flex!important;align-items:center}header>.hr>nav{width:100%}
 <div class="main" style="display: flex; flex-direction: column; gap: 18px; padding-bottom: 36px">
 <span class="sec">[03] Work</span>
 <h2 class="h2">Recent <em class="s">clients</em></h2>
+<p class="rc-intro">Founders bring me in when there's more to do than people to do it. I take the work off their plate, fix what's broken, and leave it running with little or no help from me.</p>
 </div>
 </div>
-<div class="blk line">
-<div class="main lrow" style="display: flex; flex-direction: column; gap: 14px">
-<h3 class="h3" style="margin: 0 0 6px"><a class="logo" href="https://agentaccelerator.ai/" target="_blank" rel="noopener"><img src="images/logos/aa.jpg" alt="Agent Accelerator" style="height: 64px; width: 64px; border-radius: 6px; display: block"></a></h3>
-<p style="margin: 0; max-width: 720px">Running operations for a cohort-based AI training course: onboarding, participant support, technical troubleshooting and completion analysis. Also built the second brain and the agents and automations behind the back office, cutting operations work per cohort from about 20 to 12–15 hours a week.</p>
+<article class="rc-row line">
+<div class="rc-in">
+<div class="rc-ident">
+<a class="logo" href="https://agentaccelerator.ai/" target="_blank" rel="noopener"><img class="rc-logo-aa" src="images/logos/aa.jpg" alt="Agent Accelerator"></a>
+<h3 class="rc-desc"><a class="rc-co" href="https://agentaccelerator.ai/" target="_blank" rel="noopener">Agent Accelerator</a> · Online AI course for founders and teams</h3>
 </div>
-<aside class="side">
-<div><p class="lbl">Location</p><p class="val">Remote from Berlin</p></div>
-<div><p class="lbl">Year</p><p class="val">2026</p></div>
+<p class="rc-story">Brought in by a solo founder who needed immediate ops support for cohorts of 120–150 learners. I ran learner operations, built the company brain in Notion plus ops agents, and fed learner feedback back to the founder.</p>
+<div class="rc-stats">
+<div class="rc-stat"><span class="rc-num">7x</span><span class="rc-what">more learners complete the course</span><span class="rc-from">from 9% to 63%</span></div>
+<div class="rc-stat"><span class="rc-num">90%</span><span class="rc-what">score it 9 or 10 out of 10</span><span class="rc-from">NPS 50 → 88</span></div>
+<div class="rc-stat"><span class="rc-num">5+</span><span class="rc-what">hours of manual ops work a week now done by agents</span><span class="rc-from">and counting</span></div>
+</div>
+<blockquote class="rc-quote">
+<p>Monique ramped up during Cohort 3, built some automations, then smashed the operational side of Cohort 4 out the park. Our NPS sits at +88 (up from +50) which is almost unheard of in the online education space. Thank you, Mon!</p>
+<footer class="rc-by"><img class="rc-face" src="images/people/james-mcaulay.jpg" alt="James McAulay"><cite><a href="https://www.linkedin.com/in/jamesmcaulay/" target="_blank" rel="noopener">James McAulay <span class="rc-li">LinkedIn ↗</span></a><span class="rc-role">Founder, Agent Accelerator</span></cite></footer>
+</blockquote>
+<aside class="rc-side">
+<div><p class="rc-ml">Engagement</p><p class="rc-mv">Fractional AI Ops</p></div>
+<div><p class="rc-ml">What I own</p><ul class="rc-tags"><li>Community</li><li>Learner ops</li><li>Product/UX feedback</li><li>User research</li></ul></div>
+<div><p class="rc-ml">Since</p><p class="rc-mv">June 2026</p></div>
 </aside>
 </div>
-<div class="blk line">
-<div class="main lrow" style="display: flex; flex-direction: column; gap: 14px">
-<h3 class="h3" style="margin: 0 0 6px"><a class="logo" href="https://weareloka.com/" target="_blank" rel="noopener"><img src="images/logos/loka-colour.svg" alt="Loka" style="height: 24px; width: auto; display: block"></a></h3>
-<p style="margin: 0; max-width: 720px">Strategic and operational support to the two founders. Built their AI setup and internal knowledge system, and ran hiring, customer experience and process projects.</p>
+</article>
+<article class="rc-row line">
+<div class="rc-in">
+<div class="rc-ident">
+<a class="logo" href="https://weareloka.com/" target="_blank" rel="noopener"><img class="rc-logo-loka" src="images/logos/loka-colour.svg" alt="We Are Loka"></a>
+<h3 class="rc-desc"><a class="rc-co" href="https://weareloka.com/" target="_blank" rel="noopener">We Are Loka</a> · D2C FMCG startup</h3>
 </div>
-<aside class="side">
-<div><p class="lbl">Location</p><p class="val">Remote from Berlin</p></div>
-<div><p class="lbl">Year</p><p class="val">2026</p></div>
+<p class="rc-story">The founders needed help but weren't sure who to hire. I took on CX, support, building the internal ops system, and the strategy for the outsourced support operation. Then I hired a Supply Chain and Customer Support Lead and handed it over.</p>
+<div class="rc-stats">
+<div class="rc-stat"><span class="rc-num">90%</span><span class="rc-what">fewer agency escalations</span></div>
+<div class="rc-stat"><span class="rc-num">50%</span><span class="rc-what">fewer product queries</span></div>
+<div class="rc-stat"><span class="rc-num">10+</span><span class="rc-what">people working from one company brain in Notion</span></div>
+</div>
+<blockquote class="rc-quote">
+<p>We grew faster than we could keep up and needed immediate help! Mon came into the furnace, onboarded super fast, fixed a bunch of CX things, then found the right long-term hire to take over. Anyone needing a senior strategic thinker for high-leverage projects, I 100% recommend Mon.</p>
+<footer class="rc-by"><img class="rc-face" src="images/people/anish-shonpal.jpg" alt="Anish Shonpal"><cite><a href="https://www.linkedin.com/in/anish-shonpal/" target="_blank" rel="noopener">Anish Shonpal <span class="rc-li">LinkedIn ↗</span></a><span class="rc-role">Co-founder, We Are Loka</span></cite></footer>
+</blockquote>
+<aside class="rc-side">
+<div><p class="rc-ml">Engagement</p><p class="rc-mv">Fractional AI Ops</p></div>
+<div><p class="rc-ml">What I owned</p><ul class="rc-tags"><li>CX</li><li>Customer support</li><li>Internal ops system</li><li>User research</li></ul></div>
+<div><p class="rc-ml">When</p><p class="rc-mv">Mar–Jun 2026</p></div>
 </aside>
 </div>
+</article>
 </section>
 
 <section id="background" class="line">
